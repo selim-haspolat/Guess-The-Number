@@ -5,6 +5,7 @@ const range = document.getElementById("range");
 const remain = document.getElementById('remain')
 const relod = document.getElementById('relod')
 const seeAnswer = document.getElementById('seeAnswer')
+const body = document.querySelector('body')
 
 
 let random = Math.round(Math.random() * 100);
@@ -72,3 +73,13 @@ seeAnswer.addEventListener('mouseover' , (e) => {
   seeAnswer.style.top = `${topP}px`
   seeAnswer.style.left = `${leftP}px`
 })
+
+let change = () => {
+  let c1 = Math.floor(Math.random() * 255);
+  let c2 = Math.floor(Math.random() * 255);
+  let c3 = Math.floor(Math.random() * 255);
+  let rgb = `rgb(${c1},${c2},${c3},.7)`
+  body.style.backgroundColor = rgb
+  body.style.transition = '2s'
+}
+setInterval(change, 1000)
