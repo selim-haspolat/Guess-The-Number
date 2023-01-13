@@ -4,6 +4,7 @@ const result = document.getElementById("result");
 const range = document.getElementById("range");
 const remain = document.getElementById('remain')
 const relod = document.getElementById('relod')
+const seeAnswer = document.getElementById('seeAnswer')
 
 
 let random = Math.round(Math.random() * 100);
@@ -57,4 +58,17 @@ input.addEventListener("keydown", (e) => {
 
 relod.addEventListener('click', () => {
   window.location.reload()
+})
+
+seeAnswer.addEventListener('mouseover' , (e) => {
+  operatorArr = ["+", "-"]
+  positionX = (Math.random() * 300)
+  positionY = (Math.random() * 300)
+  topP = operatorArr[(Math.round(Math.random()))].concat(positionX)
+  leftP = operatorArr[(Math.round(Math.random()))].concat(positionY)
+  console.log(topP);
+  console.log(leftP);
+  seeAnswer.style.position = 'relative'
+  seeAnswer.style.top = `${topP}px`
+  seeAnswer.style.left = `${leftP}px`
 })
