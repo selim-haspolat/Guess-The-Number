@@ -67,8 +67,6 @@ seeAnswer.addEventListener('mouseover' , (e) => {
   positionY = (Math.random() * 300)
   topP = operatorArr[(Math.round(Math.random()))].concat(positionX)
   leftP = operatorArr[(Math.round(Math.random()))].concat(positionY)
-  console.log(topP);
-  console.log(leftP);
   seeAnswer.style.position = 'relative'
   seeAnswer.style.top = `${topP}px`
   seeAnswer.style.left = `${leftP}px`
