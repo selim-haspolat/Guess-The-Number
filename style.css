@@ -29,6 +29,10 @@ body{
     margin: 1rem;
 }
 
+#inpt{
+    padding-left: 10px;
+}
+
 #check, #relod{
     cursor: pointer;
 }
