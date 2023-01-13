@@ -13,25 +13,33 @@ let answer;
 let remainCounter = 3
 let counter = 0
 
+console.log(random);
 
 checkBtn.addEventListener("click", () => {
   counter++
+  remainCounter--
+  remain.innerText = `${remainCounter} remain`
+  answer = input.value;
+  !isNaN(answer) || alert("Enter a Number");
+  answer == random ? findNum() : closestNums();
   if(counter >= 3){
     remain.innerText = 'Youl Lose'
     return result.innerText = `Answer is ${random}`
   }
-  remainCounter--
-  remain.innerText = `${remainCounter} remain`
-  answer = input.value;
-  console.log(random);
-  !isNaN(answer) || alert("Enter a Number");
-  answer == random ? alert("You Find") : closestNums();
   input.value = "";
   input.focus();
 });
 
+const findNum = () => {
+  alert("You Find")
+  relod.click()
+}
 
 const closestNums = () => {
+  if(counter >= 3){
+    remain.innerText = 'Youl Lose'
+    return result.innerText = `Answer is ${random}`
+  }
   if(random > answer && random < up && down < answer){
     down = answer
   }
