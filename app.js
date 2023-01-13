@@ -33,6 +33,9 @@ checkBtn.addEventListener("click", () => {
 });
 
 const findNum = () => {
+  if(counter >= 3){
+    return null
+  }
   alert("You Find")
   relod.click()
 }
