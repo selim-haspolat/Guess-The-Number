@@ -24,7 +24,7 @@ checkBtn.addEventListener("click", () => {
   answer = input.value;
   !isNaN(answer) || alert("Enter a Number");
   answer == random ? findNum() : closestNums();
-  if(counter > 3){
+  if(counter >= 3){
     remain.innerText = 'Youl Lose'
     return result.innerText = `Answer is ${random}`
   }
