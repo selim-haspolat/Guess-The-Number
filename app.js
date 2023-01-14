@@ -81,6 +81,6 @@ let change = () => {
   let c3 = Math.floor(Math.random() * 255);
   let rgb = `rgb(${c1},${c2},${c3},.7)`
   body.style.backgroundColor = rgb
-  body.style.transition = '2s'
+  body.style.transition = ' background-color 4s'
 }
 setInterval(change, 1000)
