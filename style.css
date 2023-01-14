@@ -10,6 +10,7 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: 'PT Mono', monospace;
+    text-align: center;
 }
 
 #inpt{
@@ -39,8 +40,12 @@ body{
     cursor: pointer;
 }
 #title{
-    font-size: 2rem;
     margin-bottom: 3rem;
+}
+
+#title h2{
+    font-size: 2rem;
+    display: inline-block;
 }
 
 #remain{
@@ -51,4 +56,10 @@ body{
     padding: 5px;
     border-radius: 10px;
     border: none;
+}
+
+@media screen and (max-width: 505px) {
+    #title h2{
+        display:block;
+    }
 }
