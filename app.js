@@ -12,7 +12,7 @@ let random = Math.round(Math.random() * 100);
 let up = 100;
 let down = 0;
 let answer;
-let remainCounter = 3
+let remainCounter = 4
 let counter = 0
 
 console.log(random);
@@ -24,7 +24,7 @@ checkBtn.addEventListener("click", () => {
   answer = input.value;
   !isNaN(answer) || alert("Enter a Number");
   answer == random ? findNum() : closestNums();
-  if(counter >= 3){
+  if(counter >= 4){
     remain.innerText = 'Youl Lose'
     return result.innerText = `Answer is ${random}`
   }
@@ -33,7 +33,7 @@ checkBtn.addEventListener("click", () => {
 });
 
 const findNum = () => {
-  if(counter > 3){
+  if(counter > 4){
     return null
   }
   alert("You Find")
@@ -41,7 +41,7 @@ const findNum = () => {
 }
 
 const closestNums = () => {
-  if(counter > 3){
+  if(counter > 4){
     remain.innerText = 'Youl Lose'
     return result.innerText = `Answer is ${random}`
   }
